@@ -17,11 +17,7 @@ app.use("/api/history", require("./api/route"));
 const PORT = process.env.PORT || 4444;
 app.listen(PORT, () => {
   console.log("APP is Running on PORT " + PORT);
-  mongoose.connect(
-    "mongodb+srv://rana:rana@cluster0.un1htee.mongodb.net/?retryWrites=true&w=majority",
-    { useNewUrlParser: true },
-    () => {
-      console.log("Database Connected");
-    }
-  );
+  mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () => {
+    console.log("Database Connected");
+  });
 });

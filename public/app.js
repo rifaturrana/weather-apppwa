@@ -11,7 +11,7 @@ const cityInput = document.getElementById("city-input");
 const historyElm = document.getElementById("history");
 const masterHistory = document.getElementById("master-history");
 
-const API_KEY = "c4d96bac50fbf1febb514989e6aae74d";
+const API_KEY =process.env.API_KEY;
 const BASE_URL = `https://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}`;
 const ICON_URL = "https://openweathermap.org/img/w/";
 const DEFAULT_CITY = "Dhaka,bd";
