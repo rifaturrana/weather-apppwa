@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 4444;
 app.listen(PORT, () => {
   console.log("APP is Running on PORT " + PORT);
   mongoose.connect(
-    "mongodb+srv://rana:rana@cluster0.un1htee.mongodb.net/?retryWrites=true&w=majority",
+    "process.env.MONGO_URL",
     { useNewUrlParser: true },
     () => {
       console.log("Database Connected");
